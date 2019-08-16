@@ -1,7 +1,7 @@
 {
 "version": 3,
 "mappings": "AAAA,mBAAoB;EAClB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,aAAa,EAAE,IAAI;EAEnB,0BAAO;IACL,SAAS,EAAE,IAAI;IACf,aAAa,EAAE,IAAI;EAGrB,4BAAS;IACP,OAAO,EAAE,IAAI;IACb,eAAe,EAAE,aAAa",
-"sources": ["preview-styles.scss"],
+"sources": ["collection-preview.styles.scss"],
 "names": [],
-"file": "preview-styles.css"
+"file": "collection-preview.styles.css"
 }
