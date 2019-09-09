@@ -25,6 +25,8 @@ class SignIn extends React.Component {
   handleSubmit = async event => {
     event.preventDefault();
 
+    console.log("start submit....");
+
     const { emailSignInStart } = this.props;
     const { email, password } = this.state;
 
@@ -33,12 +35,11 @@ class SignIn extends React.Component {
 
   handleChange = event => {
     const { value, name } = event.target;
-
     this.setState({ [name]: value });
   };
 
   render() {
-    const { googleSignInStart } = this.props;
+    const { googleSignInStart, emailSignInStart } = this.props;
     return (
       <div className="sign-in">
         <h2>I already have an account</h2>
@@ -48,8 +49,8 @@ class SignIn extends React.Component {
           <FormInput
             name="email"
             type="email"
-            handleChange={this.handleChange}
             value={this.state.email}
+            handleChange={this.handleChange}
             label="email"
             required
           />
@@ -62,7 +63,10 @@ class SignIn extends React.Component {
             required
           />
           <div className="buttons">
-            <CustomButton type="submit"> Sign in </CustomButton>
+            <CustomButton type="submit" onClick={this.handleSubmit}>
+              {" "}
+              Sign in{" "}
+            </CustomButton>
             <CustomButton
               type="button"
               onClick={googleSignInStart}
